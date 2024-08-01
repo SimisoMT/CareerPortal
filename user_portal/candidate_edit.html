@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="#" rel="icon">
+  <link href="../assets/img/favicon.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <style>
+
+      @media screen and (max-width: 700px) {
+        #candidate-img{
+          display: none;
+        }
+      }
+
+  </style>
+</head>
+
+ <body>
+    <form id="form2" runat="server">
+     <div class="row fixed-top" id="master-nav" style="background-color:#f7f7f9;">
+          <div class="col-12">
+              <nav class="navbar navbar-expand-lg rounded" aria-label="Eleventh navbar example">
+              <div class="container-fluid navbar-light">
+                <img class="navbar-brand mx-5" src="../assets/img/logo_main.svg" alt="W&RSETA logo" width="144" height="72"/>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class=" collapse navbar-collapse mx-5" id="navbarsExample09">
+                  <ul class="navbar-nav ms-md-auto ms-sm-5 ms-5 mb-2 mx-5 mb-lg-0">
+                                  
+                    <li class="nav-item dropdown">
+                        <!-- signing links navigation -->
+                        <i class="bi bi-person-fill mx-1"></i>
+                        <a runat="server" class="dropdown-toggle text-success signing" href="#" id="dropdownUserName" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                         <ul class="dropdown-menu" aria-labelledby="dropdownUserName">
+                            <li>
+                              <a class="dropdown-item d-flex align-items-center" href="./candidate.html">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a ID="HyperLink3" runat="server" class="dropdown-item d-flex align-items-center"  href="../index.html">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </li>
+                            </ul>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+              </nav>
+         </div>
+            <!--master search form start-->
+           <div class="row g-0 p-5" id="master-searchform" style="background-color:#337ab7;">
+                 <div class="col-4">
+                    <input type="text" ID="textBox1" runat="server" class="form-control form-control-sm" placeholder="Enter Job Title" type="text" autofocus=""></input>
+                 </div>
+                 <div class="col-4">
+                    <button class="btn btn-success btn-sm">Search Job</button>
+                 </div>
+          </div>
+          <!--master search form stop-->
+     </div> 
+            
+
+    <!--offcanvas for signin start-->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingForSignin" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabelForSignin">Sign In</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+                <div class="card-body">
+                        <div class="mb-3">    
+                            <input type="text" ID="textBoxSigninUserName" runat="server" class="form-control" placeholder="Enter Email" type="email"  autofocus=""></input>
+                        </div>
+                        <div class="mb-3">   
+                            <input type="text" ID="textBoxSigninPassword" type="password" class="form-control mb-3" placeholder="Enter Password" runat="server"></input>
+                        </div>
+                        <div class="mb-3 text-center" runat="server" id="DivMessages">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Show Password</label>                                  
+                        </div>
+                        <div>
+                            <!--submit button-->
+                            <a id="ButtonSignin" runat="server" class="btn btn-sm btn-success btn-block">Sign in</a>
+                        </div>
+                </div>
+        </div>
+    </div>
+    <!--offcanvas for signin ends-->
+
+    <div>
+        <!--content holder start-->
+
+        
+
+
+
+
+
+
+
+
+
+
+        <div class="bg-light  px-5 pt-5 mt-5 rounded scroll-reveal-top">
+            <div class="mt-5 sticky-top pt-5 mt-5" >
+              <div class="pagetitle scroll-reveal-top pb-2">
+                <nav>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Vacancy Portal</a></li>
+                    <li class="breadcrumb-item active">Candidate Details</li>
+                  </ol>
+                </nav>
+            </div>
+              <h3 class="pb-4"><i class="bi bi-person mx-2 accordion"></i>Candidate Details</h3>
+            </div>
+        </div>
+         
+         <section class="bg-light container-md mb-5 rounded scroll-reveal-bottom" id="vacancyList">  
+             <div class="row g-4 pb-5">
+               <div class="col">
+                     <div class="bg-info mb-3">
+                         <a  href="./candidate.html" class="btn btn-success text-center form-control form-control-sm" id="btn">Save Canditates Details</a>
+                     </div>
+                   <div class="card">
+                       <div class="row g-0">
+                         <div class="col-2 col-md-2" id="candidate-img">
+                           <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></svg>
+                         </div>
+                         <div class="col col-md-10 col-lg-10">
+                           <div class="card-body">
+                                <h5 class="card-title">Personal details</h5>
+                               <div class="row">
+                                   <div class=" col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Name</label>
+                                       <input type="text" id="disabledTextInput" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Surname</label>
+                                       <input type="text" id="disabledTextInpu" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                     <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Gender</label>
+                                       <input type="text" id="disabledTextIpu" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">D.O.B</label>
+                                       <input type="text" id="disabledTextInp" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Email</label>
+                                       <input type="text" id="disabledTextIn" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Phone</label>
+                                       <input type="text" id="disabledTextI" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                     <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Province</label>
+                                       <input type="text" id="disabledText" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                     <div class="col-12 col-md-4 mb-2">
+                                       <label for="disabledTextInput" class="form-label">Town/City</label>
+                                       <input type="text" id="disabledTex" class="form-control form-control-sm" placeholder="" >
+                                    </div>
+                                    <div class="mb-3">
+                                       <label class="form-label" for="disabledCustomFile">Upload</label>
+                                         <input type="file" class="form-control" id="disabledCustomFile">
+                                   </div>
+                              </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+         
+                     <div class="card mt-2">
+                      <div class="row g-0">
+                        <div class="col-12 col-md-12">
+                          <div class="card-body">
+                               <h5 class="card-title">Uploaded Documents</h5>
+                              <div class="row">
+                                  <div class=" col-12 col-md-6 mb-2">
+                                      <label for="disabledTextInput" class="form-label">Resume</label>
+                                      <input type="text" id="disabedTextInput" class="form-control form-control-sm" placeholder="" >
+                                   </div>
+                                   <div class=" col-12 col-md-6 mb-2">
+                                      <label for="disabledTextInput" class="form-label">Curriculum Vitae</label>
+                                      <input type="text" id="disableextInput" class="form-control form-control-sm" placeholder="" >
+                                   </div>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+         
+                     <div class="card mt-2">
+                       <div class="row g-0">
+                         <div class="col-12 col-md-12">
+                           <div class="card-body">
+                            <h5 class="card-title">Login</h5>
+                            <div class="row">
+                                 <div class="col-12 col-md-6 mb-2">
+                                    <label for="disabledTextInput" class="form-label">Email</label>
+                                    <input type="email" id="disaledTextIn" class="form-control form-control-sm" placeholder="" >
+                                 </div>
+                                 <div class="col-12 col-md-6 mb-2">
+                                    <label for="disabledTextInput" class="form-label">Password</label>
+                                    <input type="password" id="diabldTextI" class="form-control form-control-sm" placeholder="" >
+                                 </div>
+                           </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+          
+              </div>
+           </div>
+         </section>
+          <!--main section end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--content holder stop-->
+    </div>
+  </form>
+
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/scrollrevealjs/scrollreveal.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+     <script>
+         ScrollReveal({ distance: '70px' });
+         ScrollReveal().reveal('.scroll-reveal-bottom', { delay: 1, origin: 'bottom' });
+         ScrollReveal().reveal('.scroll-reveal-top', { delay: 5, origin: 'top' });
+     </script>    
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
