@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="#" rel="icon">
+  <link href="../assets/img/favicon.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+ <body>
+    <form id="form2" runat="server">
+     <div class="row fixed-top" id="master-nav" style="background-color:#f7f7f9;">
+          <div class="col-12">
+              <nav class="navbar navbar-expand-lg rounded" aria-label="Eleventh navbar example">
+              <div class="container-fluid navbar-light">
+                <img class="navbar-brand mx-5" src="../assets/img/logo_main.svg" alt="W&RSETA logo" width="144" height="72"/>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class=" collapse navbar-collapse mx-5" id="navbarsExample09">
+                  <ul class="navbar-nav ms-md-auto ms-sm-5 ms-5 mb-2 mx-5 mb-lg-0">
+                                  
+                    <li class="nav-item dropdown">
+                        <!-- signing links navigation -->
+                        <i class="bi bi-person-fill mx-1"></i>
+                        <a runat="server" class="dropdown-toggle text-success signing" href="#" id="dropdownUserName" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                         <ul class="dropdown-menu" aria-labelledby="dropdownUserName">
+                            <li>
+                              <a class="dropdown-item d-flex align-items-center" href="../user_portal/candidate.html">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a ID="HyperLink3" runat="server" class="dropdown-item d-flex align-items-center"  href="../index.html">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </li>
+                            </ul>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+              </nav>
+         </div>
+            <!--master search form start-->
+           <div class="row g-0 p-5" id="master-searchform" style="background-color:#337ab7;">
+                 <div class="col-4">
+                    <input type="text" ID="textBox1" runat="server" class="form-control form-control-sm" placeholder="Enter Job Title" type="text" autofocus=""></input>
+                 </div>
+                 <div class="col-4">
+                    <button class="btn btn-success btn-sm">Search Job</button>
+                 </div>
+          </div>
+          <!--master search form stop-->
+     </div> 
+            
+
+    <!--offcanvas for signin start-->
+
+    <!--offcanvas for signin ends-->
+
+    <div>
+        <!--content holder start-->
+
+
+
+
+
+
+
+
+<div class="container pt-5 mt-5">
+    <!--main section start-->
+    <div class="bg-light px-5 pt-5 mt-5 rounded scroll-reveal-top">
+      <div class="mt-5 sticky-top" >
+        <div class="pagetitle scroll-reveal-top pb-2">
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">W&RSETA Online</a></li>
+              <li class="breadcrumb-item active">Search</li>
+            </ol>
+          </nav>
+            <hr class="text-muted"/>
+      </div>
+        <h3 class="pb-4">Vacant Oppotunities At W&RSETA</h3>
+      </div>
+    </div>
+
+   <section class="bg-light mb-5 rounded scroll-reveal-bottom" id="vacancyList">  
+       <div class="row-md-5 g-4 pb-5">
+         <div class="col-xxl-6 col-xl-12">
+           
+          <div class="card">
+            <div class="card-header text-success">
+              Date Posted - <Label ID="Label1" runat="server">00/00/00 00:00</Label>           
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-briefcase"></i> Vacancy Title</h5>
+              <p class="card-text text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit asperiores quibusdam, quo saepe nostrum omnis obcaecati delectus vel excepturi unde.
+</p>
+             <hr class="text-muted"/>
+              <article class="mb-2" id="accordion">
+                  <div class="bd-heading sticky-xl-top align-self-startmt-xl-0 mb-xl-2">
+                    <p class="text-muted small">
+                      <span class="text-primary"><i class="bi bi-geo-alt-fill"></i> Town,Province</span> | <span class="text-primary"><i class="bi bi-clock"></i> Work Type</span> | <span class="text-primary"><i class="bi bi-diagram-2-fill"></i> Department</span>
+                    </p>
+                  </div>
+                      <div>
+                        <div class="bd-example">
+                            <div class="accordion" id="accordionExample">
+                              <div class="accordion-item">
+                                <h4 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Expend For Full Vacancy Description
+                                  </button>
+                                </h4>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                  <div class="accordion-body text-muted small">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque culpa explicabo molestias, nam veritatis laborum, suscipit ab quo enim saepe molestiae obcaecati eum voluptate officiis corporis ad non nihil rem earum commodi dicta. Iure sit sapiente eos nobis ipsa facere repellendus totam, tenetur expedita quos obcaecati minima! Accusantium provident consectetur quibusdam non ducimus officiis, suscipit et. Illo consequuntur perspiciatis velit vitae commodi minima in iusto ea! Aliquid eligendi possimus porro sapiente sequi laborum veniam libero quo sed veritatis, vitae doloribus eos commodi accusantium harum qui assumenda impedit? Pariatur natus voluptatibus itaque rem incidunt corporis fugiat, non omnis adipisci repellat.
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+            </article>
+                <a href="./apply.html" ID="ButtonApplyNow" type="button" runat="server" class="btn btn-success" data-bs-target="#staticBackdropLive">Apply Now</a>
+            </div>
+
+            <div class="card-footer text-danger">
+                Closing Date - <Label ID="Label2" runat="server">00/00/00 00:00</Label>  
+            </div>
+          </div>
+        </div>
+     </div>
+   </section>
+    <!--main section end-->
+</div>
