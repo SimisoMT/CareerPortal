@@ -1,0 +1,27 @@
+﻿body {
+}
+
+#nav-signin-form {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-weight 0.5s ease-in-out,font-weight 1s ease-in-out !important;
+    transition: background-color 0.5s ease-in-out,font-weight 1s ease-in-out !important;
+}
+
+
+
+
+
+
+
+
+
+
